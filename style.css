@@ -1,0 +1,161 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* Background Video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* Ensure it's behind content */
+}
+
+/* Container for pages */
+.container {
+  display: flex;
+  width: 400%;
+  height: 100vh;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Page Sections */
+.page {
+  width: 100vw;
+  height: 100vh;
+  padding: 4rem;
+  flex-shrink: 0;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  color: #1a1a1a;
+  z-index: 1;
+}
+
+/* Semi-transparent About Page */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  
+}
+
+/* Profile Image */
+.picha {
+  position: absolute;
+  left: 40%;
+  top: -7%;
+  width: 70%;        
+  height: auto;       
+  object-fit: cover;
+}
+
+/* About Text Section with Transparency */
+.about-text {
+  flex: 1;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  z-index: 1; /* Above video */
+  background: transparent;
+}
+
+/* Title and Content */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+p, ul {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "✔ ";
+  color: #0077cc;
+}
+
+/* Buttons */
+button {
+  padding: 0.7rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Links */
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Background image blur effect for other sections */
+.bg-blur {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+}
+
+.bg-blur::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  backdrop-filter: blur(6px); /* Blur the background */
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark overlay */
+  z-index: 0; /* Ensure it's below text */
+}
+
+.bg-blur * {
+  position: relative;
+  z-index: 1; /* Ensure content is above overlay */
+}

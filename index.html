@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio – Teach to Give</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio autoplay loop muted>
+    <source src="musica.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="media/vid1.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="container" id="container">
+    
+    <!-- First Page: About -->
+    <section class="page" id="about">
+      
+      <div class="about-content">
+        <div class="about-text">
+          <h1>Hello, I'm Maxwell a Computer <br> Science Student</h1>
+          <p>Welcome to my portfolio! I'm passionate about programming , video/picture editing, animation, and solving real-world problems with code.</p>
+          <button onclick="goToPage(1)">Next: Projects</button>
+        </div>
+        
+          <img src="media/p6.png" alt="My Profile Picture" class="picha"/>
+        
+      </div>
+    </section>
+
+    <!-- Projects Page -->
+    <section class="page bg-blur" id="projects" style="background-image: url('projects-bg.jpg');">
+      <h1>Projects</h1>
+      <ul>
+        <li>🚗 Model Town Board AI Simulation in Pygame</li>
+        <li>💻Video and picture editing</li>
+        <li>📱 Android Drawing App in Kotlin</li>
+        <li>📱Worked on social media construction </li>
+      </ul>
+      <div class="nav-buttons">
+        <button onclick="goToPage(0)">Back</button>
+        <button onclick="goToPage(2)">Next: Skills</button>
+      </div>
+    </section>
+
+    <!-- Skills Page -->
+    <section class="page bg-blur" id="skills" style="background-image: url('skills-bg.jpg');">
+      <h1>Skills & Tools</h1>
+      <p>C++, Kotlin, Python, javascript, HTML/CSS/JS, Pygame, Blender, GitHub</p>
+      <p>SPSS, Stata, CVAT, Android Studio, Visual Paradigm</p>
+      <div class="nav-buttons">
+        <button onclick="goToPage(1)">Back</button>
+        <button onclick="goToPage(3)">Next: Contact</button>
+      </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section class="page bg-blur" id="contact" style="background-image: url('contact-bg.jpg');">
+      <h1>Contact Me</h1>
+      <p>Email: <a href="mailto:maxmachi45@gmail.com">maxmachi45@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/Machanja" target="_blank">Machanja</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/maxwell-machanja-47b07235a/" target="_blank">Maxwell Machanja</a></p>
+      <div class="nav-buttons">
+        <button onclick="goToPage(2)">Back</button>
+      </div>
+    </section>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
